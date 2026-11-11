@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Old .html URLs -> new React routes (keeps existing links/SEO working)
+  RewriteRule ^about\.html$ /about [R=301,L]
+  RewriteRule ^pap\.html$ /platform [R=301,L]
+  RewriteRule ^vegaai\.html$ /products/vegaai [R=301,L]
+  RewriteRule ^marisai\.html$ /products/marisai [R=301,L]
+  RewriteRule ^spicaai\.html$ /products/spicaai [R=301,L]
+  RewriteRule ^legalprodigyai\.html$ /products/legalprodigyai [R=301,L]
+  RewriteRule ^productmanagement\.html$ /product-management [R=301,L]
+  RewriteRule ^mentorship\.html$ /mentorship [R=301,L]
+  RewriteRule ^technology\.html$ /technology [R=301,L]
+  RewriteRule ^pricing\.html$ /pricing [R=301,L]
+  RewriteRule ^conversationalaidemos\.html$ /demos/conversational-ai [R=301,L]
+  RewriteRule ^promptengineeringdemo\.html$ /demos/prompt-engineering [R=301,L]
+  RewriteRule ^recommendationsdemos\.html$ /demos/recommendations [R=301,L]
+  RewriteRule ^textclassificationdemos\.html$ /demos/text-classification [R=301,L]
+
+  # React SPA fallback: serve index.html for any non-file, non-folder URL
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ /index.html [L]
+</IfModule>
