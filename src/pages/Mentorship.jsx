@@ -30,30 +30,29 @@ export default function Mentorship() {
     <div>
       <PageHeader title="Mentorship and Coaching" />
 
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flow-root">
-        <div className="w-full md:w-[42%] md:float-right md:ml-10 mb-6 aspect-[4/3] rounded-xl overflow-hidden shadow-lg shadow-black/5 border border-gray-100">
-          <img loading="lazy" src="/img/PMGrow.jpg" alt="Mentorship growth" className="w-full h-full object-cover" />
+      <section className="bg-gray-50 border-y border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <h2 className="font-[var(--font-display)] text-2xl sm:text-3xl font-bold text-ink leading-tight text-balance text-center">
+            Mentorship, Coaching and Corporate Training
+          </h2>
+          <div className="mt-10 grid md:grid-cols-3 gap-5">
+          <div className="bg-white border border-gray-200 border-l-4 border-l-brand-teal rounded-lg p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
+            <p className="text-[14px] leading-7 text-ink-soft">
+              We firmly believe that the most effective way to learn about product management is by working with experienced product managers who have successfully driven and launched products in the past. Our product managers bring valuable insights, practical knowledge, and expertise that are essential for achieving success.
+            </p>
+          </div>
+          <div className="bg-white border border-gray-200 border-l-4 border-l-brand-teal rounded-lg p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
+            <p className="text-[14px] leading-7 text-ink-soft">
+              Our approach is grounded in extensive research, and we are committed to leading the conversation in product management. We value curiosity and counter-intuitive thinking, as we believe these skills are critical for any great product manager to master. While tactical and practical skills are essential, we understand that the ability to focus on the "why" and "what" behind a product is what truly sets a great product manager apart.
+            </p>
+          </div>
+          <div className="bg-white border border-gray-200 border-l-4 border-l-brand-teal rounded-lg p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
+            <p className="text-[14px] leading-7 text-ink-soft">
+              Our goal is to fully understand your company's vision and mission, and then help your in-house product teams align with them. We believe that by giving your product teams the skills they need to tackle bigger challenges, we can help your company achieve its goals. Let us help you take your product management to the next level.
+            </p>
+          </div>
+          </div>
         </div>
-          <h2 className="text-2xl font-bold text-ink mb-4">Mentorship, Coaching and Corporate Training</h2>
-          <p className="text-[14px] leading-8 text-ink-soft text-justify">
-            We firmly believe that the most effective way to learn about product management is by working with
-            experienced product managers who have successfully driven and launched products in the past. Our
-            product managers bring valuable insights, practical knowledge, and expertise that are essential for
-            achieving success.
-            <br />
-            <br />
-            Our approach is grounded in extensive research, and we are committed to leading the conversation in
-            product management. We value curiosity and counter-intuitive thinking, as we believe these skills
-            are critical for any great product manager to master. While tactical and practical skills are
-            essential, we understand that the ability to focus on the "why" and "what" behind a product is what
-            truly sets a great product manager apart.
-            <br />
-            <br />
-            Our goal is to fully understand your company's vision and mission, and then help your in-house
-            product teams align with them. We believe that by giving your product teams the skills they need to
-            tackle bigger challenges, we can help your company achieve its goals. Let us help you take your
-            product management to the next level.
-          </p>
       </section>
 
       <hr className="max-w-6xl mx-auto border-gray-200" />

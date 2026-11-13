@@ -5,7 +5,7 @@ import DidYouKnow from '../components/DidYouKnow.jsx'
 const SLIDES = [
   {
     image: '/img/slides/1.jpg',
-    title: 'Our AI Platforms',
+    title: 'AI Platforms',
     body: 'From raw data to a lean, secure, production-ready AI: PolarisAI Platform recomposes and deploys Small Language Models, and RohiniAI Platform curates your data and guards every prompt and response.',
     cta: 'Explore Platforms',
     to: '/platform',
@@ -191,7 +191,7 @@ export default function Home() {
             </span>
           </h3>
           <p className="mt-3 inline-block rounded-full border border-brand-teal bg-white/70 px-4 py-0.5 text-xs sm:text-sm font-semibold text-ink tracking-wide">
-            PolarisAI Labs makes it happen.
+            PolarisAI Labs builds the AI behind it.
           </p>
 
           <div className="mt-4">
@@ -210,8 +210,8 @@ export default function Home() {
               Turn AI Research Ideas into Commercially Viable AI Powered Products
             </h2>
             <p className="mt-3 text-[15px] leading-8 text-ink max-w-3xl mx-auto">
-              We build innovative AI products and platforms that exceed expectations &mdash; backed by decades of
-              combined expertise in engineering and technical product management.
+              Two platforms, four products, one goal: innovative, secure, production-ready AI. PolarisAI powers it,
+              RohiniAI fuels it with data, and our products use both to solve real business problems.
             </p>
           </div>
         </div>

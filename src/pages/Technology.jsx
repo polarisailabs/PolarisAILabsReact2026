@@ -55,30 +55,29 @@ export default function Technology() {
     <div>
       <PageHeader title="Technology" />
 
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flow-root">
-        <div className="w-full md:w-[42%] md:float-right md:ml-10 mb-6 aspect-[4/3] rounded-xl overflow-hidden shadow-lg shadow-black/5 border border-gray-100">
-          <img loading="lazy" src="/img/TechGrow.jpg" alt="Technology growth" className="w-full h-full object-cover" />
+      <section className="bg-gray-50 border-y border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <h2 className="font-[var(--font-display)] text-2xl sm:text-3xl font-bold text-ink leading-tight text-balance text-center">
+            Build and Scale Consumer and Enterprise Systems
+          </h2>
+          <div className="mt-10 grid md:grid-cols-3 gap-5">
+          <div className="bg-white border border-gray-200 border-l-4 border-l-brand-teal rounded-lg p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
+            <p className="text-[14px] leading-7 text-ink-soft">
+              Before Facebook, there were social networking platforms like Myspace, Friendster, and Orkut. Before Amazon, there were e-commerce companies like Ebay, Walmart, Best Buy, Sears, and OverStock. However, Facebook and Amazon were successful. Why?
+            </p>
+          </div>
+          <div className="bg-white border border-gray-200 border-l-4 border-l-brand-teal rounded-lg p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
+            <p className="text-[14px] leading-7 text-ink-soft">
+              Because they heavily focused on Non-functional requirements. These requirements, which focus on aspects such as performance, security, scalability, and usability, determine how well a product operates and meets the needs of its users. A product that is user-friendly, secure, and efficient will generally be more successful than one that is not. By prioritizing non-functional requirements, companies can ensure that their products meet the high standards of quality and functionality that customers have come to expect, leading to greater customer satisfaction and loyalty.
+            </p>
+          </div>
+          <div className="bg-white border border-gray-200 border-l-4 border-l-brand-teal rounded-lg p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
+            <p className="text-[14px] leading-7 text-ink-soft">
+              Alongside the functional requirements, we put equal emphasis on the non-functional requirements that make all the difference. With a focus on performance, security, scalability, availability, observability, and usability, we're able to craft products that not only meet your needs, but exceed your expectations in every way.
+            </p>
+          </div>
+          </div>
         </div>
-          <h2 className="text-2xl font-bold text-ink mb-4">Build and Scale Consumer and Enterprise Systems</h2>
-          <p className="text-[14px] leading-8 text-ink-soft text-justify">
-            Before Facebook, there were social networking platforms like Myspace, Friendster, and Orkut. Before
-            Amazon, there were e-commerce companies like Ebay, Walmart, Best Buy, Sears, and OverStock. However,
-            Facebook and Amazon were successful. Why?
-            <br />
-            <br />
-            Because they heavily focused on Non-functional requirements. These requirements, which focus on
-            aspects such as performance, security, scalability, and usability, determine how well a product
-            operates and meets the needs of its users. A product that is user-friendly, secure, and efficient
-            will generally be more successful than one that is not. By prioritizing non-functional requirements,
-            companies can ensure that their products meet the high standards of quality and functionality that
-            customers have come to expect, leading to greater customer satisfaction and loyalty.
-            <br />
-            <br />
-            Alongside the functional requirements, we put equal emphasis on the non-functional requirements that
-            make all the difference. With a focus on performance, security, scalability, availability,
-            observability, and usability, we're able to craft products that not only meet your needs, but exceed
-            your expectations in every way.
-          </p>
       </section>
 
       <hr className="max-w-6xl mx-auto border-gray-200" />

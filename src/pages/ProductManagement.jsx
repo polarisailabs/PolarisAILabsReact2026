@@ -78,30 +78,29 @@ export default function ProductManagement() {
     <div>
       <PageHeader title="Product Management" />
 
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flow-root">
-        <div className="w-full md:w-[42%] md:float-right md:ml-10 mb-6 aspect-[4/3] rounded-xl overflow-hidden shadow-lg shadow-black/5 border border-gray-100">
-          <img loading="lazy" src="/img/PMGrow.jpg" alt="Product growth" className="w-full h-full object-cover" />
+      <section className="bg-gray-50 border-y border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <h2 className="font-[var(--font-display)] text-2xl sm:text-3xl font-bold text-ink leading-tight text-balance text-center">
+            Drive and Launch 0-1 and 1-N Products
+          </h2>
+          <div className="mt-10 grid md:grid-cols-3 gap-5">
+          <div className="bg-white border border-gray-200 border-l-4 border-l-brand-teal rounded-lg p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
+            <p className="text-[14px] leading-7 text-ink-soft">
+              The success rate of new products can be challenging to determine, as success is often subjective and can be measured in various ways. However, industry studies have suggested that a relatively low percentage of new products achieve significant success, with an HBR report estimating that only 28% of new products in general are successful. The success rate for freemium products is often estimated to be even lower, at 2–5%, and for mobile apps some estimates suggest only 1% are successful.
+            </p>
+          </div>
+          <div className="bg-white border border-gray-200 border-l-4 border-l-brand-teal rounded-lg p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
+            <p className="text-[14px] leading-7 text-ink-soft">
+              For 0-1 products, the focus is on creating a new and innovative product that solves a unique problem or addresses a new opportunity in the market — requiring a deep understanding of user needs, market trends, and technological capabilities. For 1-N products, the focus shifts to scaling and expanding an existing product, leveraging its strengths and existing assets through market analysis, product optimization, and a focus on growth and sustainability.
+            </p>
+          </div>
+          <div className="bg-white border border-gray-200 border-l-4 border-l-brand-teal rounded-lg p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
+            <p className="text-[14px] leading-7 text-ink-soft">
+              Regardless of whether a product is 0-1 or 1-N, successful product design, launch, and marketing require a deep understanding of the market, the customer, and the competition, as well as a strong focus on delivering value to the end-user.
+            </p>
+          </div>
+          </div>
         </div>
-          <h2 className="text-2xl font-bold text-ink mb-4">Drive and Launch 0-1 and 1-N Products</h2>
-          <p className="text-[14px] leading-8 text-ink-soft text-justify">
-            The success rate of new products can be challenging to determine, as success is often subjective and
-            can be measured in various ways. However, industry studies have suggested that a relatively low
-            percentage of new products achieve significant success, with an HBR report estimating that only 28%
-            of new products in general are successful. The success rate for freemium products is often estimated
-            to be even lower, at 2–5%, and for mobile apps some estimates suggest only 1% are successful.
-            <br />
-            <br />
-            For 0-1 products, the focus is on creating a new and innovative product that solves a unique problem
-            or addresses a new opportunity in the market — requiring a deep understanding of user needs, market
-            trends, and technological capabilities. For 1-N products, the focus shifts to scaling and expanding
-            an existing product, leveraging its strengths and existing assets through market analysis, product
-            optimization, and a focus on growth and sustainability.
-            <br />
-            <br />
-            Regardless of whether a product is 0-1 or 1-N, successful product design, launch, and marketing
-            require a deep understanding of the market, the customer, and the competition, as well as a strong
-            focus on delivering value to the end-user.
-          </p>
       </section>
 
       <hr className="max-w-6xl mx-auto border-gray-200" />
