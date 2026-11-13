@@ -145,11 +145,31 @@ export function CompareTable({ rows }) {
   )
 }
 
-export function CTA({ title, children }) {
+export function CTA({ title, children, action }) {
   return (
     <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
       <h3 className="text-xl sm:text-2xl font-bold text-ink mb-4">{title}</h3>
       <p className="text-[14.5px] leading-7 text-ink-soft text-justify">{children}</p>
+      {action && <div className="mt-7">{action}</div>}
     </section>
+  )
+}
+
+export function VideoPlayer({ src, poster, title, caption }) {
+  return (
+    <figure className="w-full">
+      {title && <h4 className="text-[14px] font-bold text-ink mb-2.5">{title}</h4>}
+      <video
+        controls
+        preload="metadata"
+        playsInline
+        poster={poster}
+        className="w-full aspect-video rounded-lg border border-gray-200 bg-black shadow-md shadow-black/5"
+      >
+        <source src={src} type="video/mp4" />
+        Your browser does not support embedded video.
+      </video>
+      {caption && <figcaption className="text-xs text-ink-soft mt-2">{caption}</figcaption>}
+    </figure>
   )
 }

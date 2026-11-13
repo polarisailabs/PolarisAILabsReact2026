@@ -30,10 +30,14 @@ public/
 | `/` | Home |
 | `/about` | About Us (team, industries, expertise, leadership, contact form + map) |
 | `/platform` | PolarisAI Platform |
+| `/platform/request-demo` | PolarisAI Platform demo request form |
+| `/platform/rohiniai` | RohiniAI Platform |
 | `/products/vegaai` | VegaAI |
+| `/products/vegaai/request-demo` | VegaAI demo request form |
 | `/products/marisai` | MarisAI |
 | `/products/spicaai` | SpicaAI |
-| `/products/legalprodigyai` | LegalProdigyAI |
+| `/products/spicaai/request-demo` | SpicaAI demo request form |
+| `/products/sumatiai` | SumatiAI (formerly LegalProdigyAI) |
 | `/product-management` | Product Management Advisory |
 | `/mentorship` | Mentorship & Coaching |
 | `/technology` | Technology Advisory |

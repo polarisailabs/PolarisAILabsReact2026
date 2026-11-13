@@ -1,4 +1,4 @@
-export default function HeroTitle({ children }) {
+export default function HeroTitle({ children, below }) {
   return (
     <div className="flex flex-col items-center">
       <div className="flex items-center gap-3">
@@ -14,6 +14,7 @@ export default function HeroTitle({ children }) {
         <span className="hidden sm:block h-px w-10 bg-gradient-to-l from-transparent to-white/70" />
       </div>
       <span className="mt-1 h-[3px] w-16 rounded-full bg-gradient-to-r from-white/20 via-white to-white/20" />
+      {below}
     </div>
   )
 }

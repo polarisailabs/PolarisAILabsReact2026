@@ -8,7 +8,7 @@
   RewriteRule ^vegaai\.html$ /products/vegaai [R=301,L]
   RewriteRule ^marisai\.html$ /products/marisai [R=301,L]
   RewriteRule ^spicaai\.html$ /products/spicaai [R=301,L]
-  RewriteRule ^legalprodigyai\.html$ /products/legalprodigyai [R=301,L]
+  RewriteRule ^legalprodigyai\.html$ /products/sumatiai [R=301,L]
   RewriteRule ^productmanagement\.html$ /product-management [R=301,L]
   RewriteRule ^mentorship\.html$ /mentorship [R=301,L]
   RewriteRule ^technology\.html$ /technology [R=301,L]

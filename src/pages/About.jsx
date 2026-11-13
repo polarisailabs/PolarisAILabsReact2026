@@ -137,7 +137,7 @@ export default function About() {
               and Data Admins at SMEs to recompose, optimize, fine-tune, and deploy Polaris AI open-weight
               optimized SLMs on their own local infrastructure — replacing costly API-based LLMs and delivering
               up to 90% cost savings and 80% lower latency, fully offline and privacy-compliant. These SLM's can
-              be Post-trained · Quantized · Distilled · Pruned · Memory &amp; Compute Optimized using PolarisAI
+              be Post-trained · PreciseQuantized · Distilled · PreciseTrimmed · Memory &amp; Compute Optimized using PolarisAI
               Platform.
             </p>
             <p>

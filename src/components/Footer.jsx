@@ -38,15 +38,15 @@ export default function Footer() {
     <footer className="bg-[#161a20] text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <h5 className="text-white font-semibold text-[15px] mb-1.5 tracking-wide">Our Contact</h5>
-          <address className="not-italic text-[14.5px] leading-6 text-gray-400">
+          <h5 className="text-white font-semibold text-[11px] mb-1 tracking-wide">Our Contact</h5>
+          <address className="not-italic text-[10px] leading-4 text-gray-400">
             <strong className="text-gray-200">PolarisAI Labs</strong>
             <br />
             Bandlaguda Jagir
             <br />
             Hyderabad, INDIA
           </address>
-          <p className="text-[14.5px] leading-6 text-gray-400 mt-1.5">
+          <p className="text-[10px] leading-4 text-gray-400 mt-1">
             (+91) 8978556611
             <br />
             gopala@polarisailabs.com
@@ -55,8 +55,8 @@ export default function Footer() {
 
         {columns.map((col) => (
           <div key={col.heading}>
-            <h5 className="text-white font-semibold text-[15px] mb-1.5 tracking-wide">{col.heading}</h5>
-            <ul className="space-y-1 text-[14.5px]">
+            <h5 className="text-white font-semibold text-[11px] mb-1 tracking-wide">{col.heading}</h5>
+            <ul className="space-y-0.5 text-[10px] leading-4">
               {col.links.map((l) =>
                 l.to ? (
                   <li key={l.label}>
@@ -84,7 +84,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1.5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[15px] text-gray-300">&copy; PolarisAI Labs 2026 All rights reserved.</p>
+          <p className="text-[10px] text-gray-400">&copy; PolarisAI Labs 2026 All rights reserved.</p>
           <div className="flex items-center gap-3">
             {social.map((s) => (
               <a

@@ -38,7 +38,7 @@ export const HERO_MODULES = {
     {
       "icon": "fa-cogs",
       "title": "Efficient AI Core",
-      "body": "Quantization, LoRA & Chain-of-Thought reasoning"
+      "body": "PreciseQuant, LoRA & Chain-of-Thought reasoning"
     }
   ],
   "marisai": [
@@ -125,47 +125,52 @@ export const HERO_MODULES = {
       "body": "78+ jurisdictions · Antitrust · Data laws"
     }
   ],
-  "legalprodigyai": [
+  "sumatiai": [
     {
-      "icon": "fa-gavel",
-      "title": "Indian Penal Code",
-      "body": "IPC sections · Case references · Verdicts"
+      "icon": "fa-database",
+      "title": "Proprietary AI and Data",
+      "body": "PolarisAI models · RohiniAI legal data"
     },
     {
-      "icon": "fa-comments",
-      "title": "Legal Q&A",
-      "body": "Human-like answers · Plain language"
+      "icon": "fa-magic",
+      "title": "AI-Powered",
+      "body": "Research · Drafting · Redlining · Legal ops"
     },
     {
-      "icon": "fa-user",
-      "title": "Self-Represented",
-      "body": "No lawyer needed · 75% of civil cases"
+      "icon": "fa-search",
+      "title": "Search Intelligence",
+      "body": "Context-aware · Thinks like a lawyer"
     },
     {
-      "icon": "fa-lock",
-      "title": "Trustworthy Sources",
-      "body": "Verified · Accurate · Up-to-date"
+      "icon": "fa-sliders",
+      "title": "Keyword & Semantic",
+      "body": "Exact match · Meaning-based results"
     },
     {
-      "icon": "fa-balance-scale",
-      "title": "Access to Justice",
-      "body": "42% global access gap · Bridging it"
-    },
-    {
-      "icon": "fa-clock-o",
-      "title": "24/7 Availability",
-      "body": "Instant answers · No appointments"
+      "icon": "fa-link",
+      "title": "Source Link",
+      "body": "Hyperlinked judgments · Verify every point"
     },
     {
       "icon": "fa-usd",
       "title": "Cost Effective",
-      "body": "Fraction of lawyer fees · Accessible"
+      "body": "90% less research time · One workspace"
     },
     {
-      "icon": "fa-globe",
-      "title": "Expanding Coverage",
-      "body": "India now · US law coming soon"
+      "icon": "fa-lock",
+      "title": "Privacy Compliant",
+      "body": "On-premise data · EU AI Act · DPDP Act"
     }
+  ],
+  "rohini": [
+    { "icon": "fa-cloud-download", "title": "Collect", "body": "Enterprise data sources · Expert-written data" },
+    { "icon": "fa-filter", "title": "Curate", "body": "Dedupe · Filter · Surface edge cases" },
+    { "icon": "fa-tags", "title": "Annotate", "body": "NER · Classification · Transcription · Documents" },
+    { "icon": "fa-thumbs-up", "title": "RLHF", "body": "Human preference data for model alignment" },
+    { "icon": "fa-bug", "title": "Red Teaming", "body": "Prompt-injection and jailbreak testing" },
+    { "icon": "fa-bar-chart", "title": "Evaluation", "body": "Diverse prompt sets to expose weak points" },
+    { "icon": "fa-shield", "title": "Input Guardrails", "body": "Injection · PII · Scope checks before the model" },
+    { "icon": "fa-lock", "title": "Output Guardrails", "body": "Harmful content · Leakage · Grounding checks" }
   ],
   "pap": [
     {
@@ -175,7 +180,7 @@ export const HERO_MODULES = {
     },
     {
       "icon": "fa-compress",
-      "title": "Quantization",
+      "title": "PreciseQuant",
       "body": "INT8 · INT4 · GPTQ Compression"
     },
     {

@@ -6,15 +6,18 @@ const NAV = [
   {
     label: 'Products',
     items: [
+      { label: 'SumatiAI', to: '/products/sumatiai' },
       { label: 'VegaAI', to: '/products/vegaai' },
-      { label: 'MarisAI', to: '/products/marisai' },
       { label: 'SpicaAI', to: '/products/spicaai' },
-      { label: 'LegalProdigyAI', to: '/products/legalprodigyai' },
+      { label: 'MarisAI', to: '/products/marisai' },
     ],
   },
   {
     label: 'Platform',
-    items: [{ label: 'PolarisAI Platform', to: '/platform' }],
+    items: [
+      { label: 'PolarisAI Platform', to: '/platform' },
+      { label: 'RohiniAI Platform', to: '/platform/rohiniai' },
+    ],
   },
   {
     label: 'Research',

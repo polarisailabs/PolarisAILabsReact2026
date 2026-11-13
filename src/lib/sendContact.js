@@ -23,8 +23,11 @@ export async function sendContact(form, source) {
         email: form.email,
         phone: form.phone,
         message: form.comment,
+        company: form.company,
+        role: form.role,
+        interests: form.interests,
         page: source,
-        _subject: `Website enquiry from ${form.name} (${source})`,
+        _subject: form.subject || `Website enquiry from ${form.name} (${source})`,
         _gotcha: form.website || '', // spam trap: real visitors leave it empty
       }),
     })

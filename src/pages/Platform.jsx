@@ -1,4 +1,5 @@
-import { PageHeader, CapCard, PipelineStep, MaturityBar, TrendItem, CTA } from '../components/ui.jsx'
+import { Link } from 'react-router-dom'
+import { PageHeader, CapCard, PipelineStep, MaturityBar, StatCard, CTA } from '../components/ui.jsx'
 import HeroTitle from '../components/HeroTitle.jsx'
 import { HeroModuleRow } from '../components/ProductHero.jsx'
 import { HERO_MODULES } from '../data/heroModules.js'
@@ -10,7 +11,7 @@ const PIPELINE = [
   { icon: 'fa-cogs', title: 'Pre & Post-Training', body: 'Distributed transformer training on domain-specific corpora.' },
   { icon: 'fa-sliders', title: 'Fine-Tuning', body: 'PEFT, LoRA, QLoRA & full-parameter adaptation for downstream tasks.' },
   { icon: 'fa-bar-chart', title: 'Evaluation & Scoring', body: 'Multi-metric benchmarking with human-in-the-loop validation.' },
-  { icon: 'fa-compress', title: 'Quantization & Pruning', body: 'INT8/INT4 compression — up to 4× cost reduction, <2% accuracy loss.' },
+  { icon: 'fa-compress', title: 'PreciseQuant & PreciseTrim', body: 'INT8/INT4 compression — up to 4× cost reduction, <2% accuracy loss.' },
   { icon: 'fa-rocket', title: 'SLM Inference', body: 'Edge-optimized serving for low-latency, on-premise deployments.' },
 ]
 
@@ -21,6 +22,14 @@ const MATURITY = [
   { label: 'Inference Latency p95 < 200ms', value: 95 },
   { label: 'Cost Efficiency ($/1K tokens)', value: 88 },
   { label: 'Explainability & Interpretability', value: 78 },
+]
+
+const JOURNEY = [
+  { icon: 'fa-puzzle-piece', title: 'Recompose', body: 'AI Admins and Infra Engineers select and recompose open-weight SLMs.' },
+  { icon: 'fa-compress', title: 'Optimize', body: 'Apply PreciseQuant, distillation and PreciseTrim for low memory and compute.' },
+  { icon: 'fa-graduation-cap', title: 'Fine-Tune', body: 'Train on your own domain-specific enterprise data.' },
+  { icon: 'fa-server', title: 'Deploy', body: 'Deploy on existing infrastructure, including desktops, laptops and mobile.' },
+  { icon: 'fa-bolt', title: 'Infer', body: 'Offline, private, near real-time inference on-device.' },
 ]
 
 const FACTS = [
@@ -37,7 +46,7 @@ export default function Platform() {
       {/* Hero with modules (compact) */}
       <section className="brand-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
-          <div className="flex items-center justify-center gap-3 mb-1.5 flex-wrap">
+          <div className="flex items-center justify-center gap-3 mb-3 flex-wrap">
             <HeroTitle>PolarisAI Platform</HeroTitle>
             <span className="bg-white/20 text-white text-[11px] font-semibold tracking-wider uppercase px-3 py-[3px] rounded-[14px]">
               v2.0
@@ -46,46 +55,123 @@ export default function Platform() {
               Enterprise
             </span>
           </div>
-          <h3 className="text-white/85 text-sm max-w-2xl mx-auto leading-relaxed mb-1">
-            Build, optimize &amp; deploy Small Language Models that run on desktops, laptops &amp; mobile devices.
-          </h3>
-          <p className="text-white/85 text-sm mb-3">
-            Post-trained · Quantized · Distilled · Pruned · Memory &amp; Compute Optimized
-          </p>
           <HeroModuleRow modules={HERO_MODULES.pap} />
+          <div className="mt-4">
+            <Link
+              to="/platform/request-demo"
+              className="inline-flex items-center gap-2 bg-white text-[#123a63] font-bold text-[13px] px-5 py-2 rounded-md shadow-lg shadow-black/20 hover:-translate-y-0.5 transition-transform"
+            >
+              <i className="fa fa-calendar-check-o" aria-hidden="true" /> Request a Demo
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Intro / market stats */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-4 text-[14.5px] leading-8 text-ink-soft text-justify">
-        <p>
-          The AI platform market is undergoing its most significant transformation in a decade. According to
-          Gartner, global AI software revenues are projected to exceed <strong>$297 billion by 2027</strong>,
-          while IDC estimates that more than <strong>75% of enterprise applications</strong> will leverage AI
-          capabilities by 2026. A McKinsey Global Survey found that <strong>65% of organizations</strong> now
-          regularly use generative AI in at least one business function — nearly double the figure reported in
-          2023. Yet despite soaring adoption, a staggering{' '}
-          <strong>85% of AI projects never reach production</strong> (VentureBeat), largely due to fragmented
-          tooling, poor data pipelines, and the absence of a unified end-to-end development infrastructure.
+      {/* Intro (boxed) */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-6">
+        <div className="bg-teal-50/60 border border-teal-100 rounded-lg p-6 text-center">
+          <p className="text-[15px] leading-8 text-ink">
+            Procuring a model is only the starting point. From there, AI and IT teams inherit an{' '}
+            <strong>ongoing burden</strong> of adapting, fine-tuning, recomposing and reoptimizing it as
+            requirements and hardware change, a cycle that restarts with every new model release.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white border border-gray-200 border-l-4 border-l-brand-teal rounded p-6">
+            <h3 className="text-base font-bold text-ink mb-2">
+              <i className="fa fa-line-chart text-brand-teal-dark mr-2" aria-hidden="true" />
+              Adoption is soaring
+            </h3>
+            <p className="text-[13.5px] leading-7 text-ink-soft">
+              According to Gartner, global AI software revenues are projected to exceed $297 billion by 2027,
+              and IDC estimates that more than 75% of enterprise applications will leverage AI capabilities by
+              2026. A McKinsey Global Survey found that 65% of organizations now regularly use generative AI in
+              at least one business function, nearly double the figure reported in 2023.
+            </p>
+          </div>
+          <div className="bg-white border border-gray-200 border-l-4 border-l-brand-teal rounded p-6">
+            <h3 className="text-base font-bold text-ink mb-2">
+              <i className="fa fa-exclamation-triangle text-brand-teal-dark mr-2" aria-hidden="true" />
+              Production is the bottleneck
+            </h3>
+            <p className="text-[13.5px] leading-7 text-ink-soft">
+              Despite soaring adoption, 85% of AI projects never reach production (VentureBeat), largely due to
+              fragmented tooling, poor data pipelines and the absence of a unified end-to-end development
+              infrastructure. Token-based APIs and GPU cloud bills add cost on top.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <StatCard number="$297B" label="projected global AI software revenue by 2027" source="Gartner" />
+          <StatCard number="75%" label="of enterprise applications to leverage AI by 2026" source="IDC" />
+          <StatCard number="65%" label="of organizations regularly use generative AI" source="McKinsey" />
+          <StatCard number="85%" label="of AI projects never reach production" source="VentureBeat" />
+        </div>
+
+        <p className="text-[14.5px] leading-8 text-ink-soft text-center">
+          The <strong>PolarisAI Platform</strong> is purpose-built to close that gap:{' '}
+          <strong>Recompose, Optimize &amp; Deploy Small Language Models</strong> that run on your own servers,
+          desktops, laptops and mobile devices.
         </p>
-        <p>
-          The <strong>PolarisAI Platform</strong> is purpose-built to do exactly that —{' '}
-          <strong>Recompose, Optimize &amp; Deploy Small Language Models that run on desktops, laptops &amp; mobile
-          devices.</strong> Every module in the platform serves one mission: take a model from raw data all the
-          way to a lean, production-ready SLM that fits in your existing infrastructure, not just in a data
-          centre. Our models are <strong>Post-trained</strong> on curated domain corpora,{' '}
-          <strong>Precise-Quantized&trade;</strong> to low precision for minimal memory footprint,{' '}
-          <strong>Intelligence-Recovered&trade;</strong> from larger teachers for maximum accuracy-per-parameter,{' '}
-          <strong>Precise-Trimmed&trade;</strong> to strip redundant weights, and fully{' '}
-          <strong>Memory &amp; Compute Optimized</strong> for real-world edge and on-premise deployment — without
-          sacrificing the quality and intelligence your product demands.
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white border border-gray-200 border-t-4 border-t-brand-teal rounded p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
+            <span className="text-[11px] font-bold tracking-wider uppercase text-brand-teal-dark">First</span>
+            <h3 className="text-base font-bold text-ink mt-1 mb-2">It understands your environment</h3>
+            <p className="text-[13.5px] leading-7 text-ink-soft">
+              The platform auto-detects the target environment and understands its architecture and every
+              internal detail. It then automatically bakes, adapts, recomposes, fine-tunes and optimizes the
+              model against that architecture and the business&apos;s own data and infrastructure.
+            </p>
+          </div>
+          <div className="bg-white border border-gray-200 border-t-4 border-t-brand-teal rounded p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
+            <span className="text-[11px] font-bold tracking-wider uppercase text-brand-teal-dark">Second</span>
+            <h3 className="text-base font-bold text-ink mt-1 mb-2">It does so every time</h3>
+            <p className="text-[13.5px] leading-7 text-ink-soft">
+              The time from model procurement to production deployment is compressed for every new model, and
+              compressed again whenever architecture, internals, version or data change. The result is a model
+              deployed and actively in use across servers, laptops, mobile and edge devices.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <StatCard number="90%" label="up to 90% cost savings versus token-based APIs and GPU cloud bills" />
+          <StatCard number="70%" label="up to 70% less latency, fully offline on CPU or CPU and GPU" />
+          <StatCard number="12" label="working modules, built and running end to end" />
+          <StatCard number="8" label="optimization techniques applied to every model" />
+        </div>
+
+        <div className="bg-teal-50/60 border border-teal-100 rounded-lg p-6 text-center">
+          <p className="text-[14.5px] leading-8 text-ink">
+            Built for organizations looking to bring the latest generative AI capabilities into their existing
+            or new applications, <strong>or to launch a dedicated AI business line of their own</strong>.
+          </p>
+        </div>
+      </section>
+
+      {/* ============ Journey ============ */}
+      <PageHeader title="Your Journey on PolarisAI Platform" />
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <p className="text-[13.5px] leading-7 text-ink-soft mb-6">
+          The platform collapses the ongoing cycle of adapting, fine-tuning, recomposing and reoptimizing into
+          a single workflow, taking an open-weight SLM from the bench to on-premise deployment in five steps.
         </p>
+        <div className="bg-teal-50/60 border border-teal-100 rounded-lg p-6 flex flex-wrap">
+          {JOURNEY.map((step, i) => (
+            <PipelineStep key={step.title} icon={step.icon} title={`${i + 1}. ${step.title}`} isLast={i === JOURNEY.length - 1}>
+              {step.body}
+            </PipelineStep>
+          ))}
+        </div>
       </section>
 
       {/* Pipeline */}
       <PageHeader title="End-to-End Small Language Models Enablement Pipeline" />
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <p className="text-[13.5px] text-ink-soft mb-6 max-w-3xl">
+        <p className="text-[13.5px] leading-7 text-ink-soft mb-6">
           A unified pipeline is the difference between a prototype and a production AI product. PolarisAI
           Platform orchestrates every stage seamlessly — from raw data to real-time intelligent responses —
           eliminating the integration overhead that kills most AI initiatives before they deliver value.
@@ -102,75 +188,47 @@ export default function Platform() {
       {/* Capabilities */}
       <PageHeader title="PolarisAI Platform Capabilities" />
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <p className="text-[13.5px] text-ink-soft mb-8 max-w-3xl">
-          Every module in the PolarisAI Platform is purpose-built for a specific stage of the AI/ML lifecycle.
-          Together they form a cohesive, end-to-end environment where data scientists, ML engineers, and product
-          teams work from a single, integrated infrastructure — eliminating context-switching, reducing
-          error-prone hand-offs, and accelerating time-to-production by an average of{' '}
-          <strong className="text-ink">2.4×</strong> (McKinsey, 2024).
-        </p>
-        <div className="grid md:grid-cols-2 gap-6">
-          <CapCard icon="fa-filter" title="Small Language Models Fine-Tuning">
-            Fine-tuning is where a general-purpose model becomes a precise, domain-expert tool. PolarisAI
-            Platform's fine-tuning module supports both full-parameter fine-tuning and parameter-efficient
-            methods — LoRA, QLoRA, Prefix Tuning, and Adapter Layers — enabling organizations to achieve
-            GPT-4-class domain accuracy at less than 1% of the compute cost. A 2024 Stanford HELM study showed
-            fine-tuned 7B models outperform GPT-3.5 on industry-specific benchmarks by up to 22%. The
-            classification workbench includes automated class-imbalance handling, label smoothing, temperature
-            scaling for confidence calibration, and per-class F1 reporting — ensuring models are not just
-            accurate in aggregate but reliable across every label, which is critical in healthcare, legal,
-            financial, and e-commerce classification tasks.
+        <div className="space-y-4 text-[13.5px] leading-7 text-ink-soft mb-8">
+          <p>
+            PolarisAI Platform turns general-purpose open-weight small language models into optimized,
+            fine-tuned, domain-specific ones: <strong className="text-ink">Post-trained · PreciseQuantized ·
+            PreciseIntelligenceRecovered · PreciseTrimmed · PreciseLowRankAdapted · PreciseRewardAligned ·
+            Precise Memory Optimized · Precise Compute Optimized</strong>.
+          </p>
+          <p>
+            It can work with proprietary models too, but is intentionally focused on open-weight models, since
+            only they can be fully decomposed and optimized to an enterprise&apos;s exact requirements. Models
+            run fully offline, optimized for CPU only, or CPU and GPU together where a GPU is available, for
+            up to 70% less latency, complete data privacy and full control.
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <CapCard icon="fa-globe" title="Runs Anywhere">
+            Fully offline. No cloud, no APIs. Deploy on servers, desktops, laptops, phones, and edge devices.
           </CapCard>
-          <CapCard icon="fa-bolt" title="Small Language Models Quantization and Inference">
-            The era of Small Language Models (SLMs) has arrived. Microsoft Phi-3, Google Gemma 2, Qwen 3.5 and
-            Meta LLaMA-3 8B have demonstrated that sub-10B models — when correctly quantized and
-            instruction-tuned — match much larger models on targeted tasks while delivering 4–8× lower inference
-            cost and 60–80% lower latency. PolarisAI's quantization workbench supports INT8, INT4, and GPTQ
-            quantization with a live accuracy-vs-speed tradeoff dashboard so teams can make informed compression
-            decisions. The SLM inference engine is optimized for on-premise CPU servers, edge hardware (NVIDIA
-            Jetson, Apple Silicon), and mobile deployment — enabling use cases where data sovereignty, sub-100ms
-            latency, or air-gapped environments make cloud-only LLMs impractical. IDC forecasts 40% of enterprise
-            LLM inference will run on-premise by 2026.
+          <CapCard icon="fa-money" title="Up to 90% Cost Savings">
+            Replace token-based APIs and GPU cloud bills with costs limited to infrastructure you already own.
           </CapCard>
-          <CapCard icon="fa-eye" title="Attention Algorithms">
-            Every modern transformer model — BERT, GPT, LLaMA, T5 — is driven by attention mechanisms that
-            assign relevance weights across tokens. Without visibility into these weights, debugging
-            misclassifications or hallucinations is guesswork. PolarisAI Platform provides dedicated visualizers
-            for Multi-Head Attention (encoder cross-token relationships at each layer and head) and Masked
-            Self-Attention (decoder causal patterns in autoregressive generation). Gartner identifies
-            explainability as a top-3 enterprise AI requirement, and the EU AI Act mandates transparency for
-            high-risk AI systems. Our attention visualizer gives engineering teams the interpretability depth
-            required to meet both regulatory standards and product quality bar — turning a black box into an
-            understandable, debuggable system.
+          <CapCard icon="fa-lock" title="Privacy by Design">
+            Your enterprise data, competitive edge, and model stack stay entirely in your hands — full
+            compliance, full control.
           </CapCard>
-          <CapCard icon="fa-server" title="Small Language Models Post-Training Infrastructure">
-            Post-training on a foundation model is the most compute-intensive step in AI development —
-            GPT-3-scale runs cost upward of $4 million. PolarisAI Platform democratizes post-training with a
-            distributed pipeline supporting data parallelism, gradient checkpointing, and mixed-precision
-            training (FP16/BF16). Supported objectives include Masked Language Modeling (MLM), Causal Language
-            Modeling (CLM), and span-corruption (T5-style). Native integrations with Weights &amp; Biases provide
-            full experiment lineage. For organizations that cannot justify ground-up post-training, the platform
-            also supports continued post-training on top of open-source checkpoints (LLaMA, Qwen, Gemma) —
-            achieving domain adaptation at a fraction of the cost with a proven, reproducible workflow.
+          <CapCard icon="fa-wrench" title="Recomposed & Optimized">
+            Recompose and optimize SLMs using PreciseQuant, PreciseTrim, Precise Intelligence Recovery, and
+            PreciseLowRank.
           </CapCard>
-          <CapCard icon="fa-font" title="Tokenization Engine">
-            Tokenization determines how a model perceives language — a poor tokenizer propagates errors through
-            every downstream stage. The PolarisAI Tokenization Engine supports BPE (Byte Pair Encoding),
-            WordPiece and SentencePiece in a single interactive workbench. Practitioners can visualize merge
-            rules, compare vocabulary coverage across corpora, and benchmark subword segmentation side-by-side
-            before committing to a pre &amp; post training run. A well-tuned tokenizer reduces vocabulary size by
-            30–40% and directly improves model perplexity and downstream task accuracy. The workbench exports
-            production-ready tokenizer configs compatible with HuggingFace Tokenizers, SentencePiece, and
-            tiktoken.
+          <CapCard icon="fa-crosshairs" title="Auto-Detect Hardware Compatibility">
+            Automatically detects compatible SLMs for your existing hardware within its memory and compute
+            footprint.
           </CapCard>
-          <CapCard icon="fa-sitemap" title="Embeddings Workbench">
-            Vector embeddings are now the connective tissue of modern AI — powering semantic search, RAG
-            pipelines, recommendation engines, and anomaly detection. A 2024 a16z report found that over 70% of
-            enterprise AI applications rely on embeddings as a core component. The PolarisAI Embeddings
-            Workbench enables teams to generate embeddings from multiple model families, project them into
-            2D/3D space, and evaluate cosine similarity distributions and retrieval precision@k — all
-            interactively. Teams that use the workbench to select embedding models cut experimentation cycles
-            from weeks to hours and consistently achieve higher retrieval quality in production RAG deployments.
+          <CapCard icon="fa-building" title="Built for Enterprise IT">
+            Purpose-built for AI Admins, AI Infrastructure Engineers, and Data Admins at SMEs.
+          </CapCard>
+          <CapCard icon="fa-bolt" title="Up to 70% Less Latency">
+            Recomposed and optimized SLMs deliver near real-time inference on your own hardware.
+          </CapCard>
+          <CapCard icon="fa-graduation-cap" title="Domain Data Tuning">
+            Post-train and fine-tune SLMs on your own data for domains like Healthcare, Finance, and more.
           </CapCard>
         </div>
       </section>
@@ -207,58 +265,84 @@ export default function Platform() {
         </div>
       </section>
 
-      {/* Trends */}
-      <div className="bg-gradient-to-br from-[#1a1a1a] to-[#333] py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-brand-teal text-lg font-bold mb-6">2026 AI Platform Trends Shaping Our Roadmap</h3>
-          <div className="grid md:grid-cols-2 gap-x-10">
+      {/* ============ Current state ============ */}
+      <PageHeader title="Current State of PolarisAI Platform" />
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-white border border-gray-200 border-t-4 border-t-brand-teal rounded p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
+            <span className="text-2xl text-brand-teal-dark">
+              <i className="fa fa-check-circle" aria-hidden="true" />
+            </span>
+            <h3 className="text-base font-bold text-ink mt-3 mb-2">Production-Ready, Not a Demo</h3>
+            <p className="text-[13.5px] leading-7 text-ink-soft">
+              12 working modules, built and functioning end to end. Recomposition, optimization, fine-tuning,
+              deployment, and inference are live capabilities today, not a proof of concept.
+            </p>
+          </div>
+          <div className="bg-white border border-gray-200 border-t-4 border-t-brand-teal rounded p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
+            <span className="text-2xl text-brand-teal-dark">
+              <i className="fa fa-handshake-o" aria-hidden="true" />
+            </span>
+            <h3 className="text-base font-bold text-ink mt-3 mb-2">Backed by Tier-1 Deep Tech Companies</h3>
+            <p className="text-[13.5px] leading-7 text-ink-soft">
+              Free development and testing support from Tier-1 deep tech companies, including GPU compute, an
+              incubation program, product subscriptions and a Business Fellowship, all confirmed with zero
+              equity given in exchange.
+            </p>
+          </div>
+          <div className="bg-white border border-gray-200 border-t-4 border-t-brand-teal rounded p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
+            <span className="text-2xl text-brand-teal-dark">
+              <i className="fa fa-university" aria-hidden="true" />
+            </span>
+            <h3 className="text-base font-bold text-ink mt-3 mb-2">Bootstrapped &amp; Founder-Owned</h3>
+            <p className="text-[13.5px] leading-7 text-ink-soft">
+              Capital-efficient by design: the platform reached production readiness on the founder&apos;s own
+              capital, with full ownership retained. No outside investors, no dilution to date.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ Let's talk ============ */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-14">
+        <h3 className="text-lg font-bold text-ink mb-6">Let&apos;s Talk</h3>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="flex gap-4 bg-white border border-gray-200 border-t-4 border-t-brand-teal rounded p-6">
+            <span className="shrink-0 w-9 h-9 rounded-full bg-brand-teal text-[#111] font-bold flex items-center justify-center">1</span>
             <div>
-              <TrendItem badge="HOT">
-                <strong className="text-white">Agentic AI &amp; Autonomous Pipelines:</strong> Gartner projects
-                that 33% of enterprise software will embed agentic AI by 2025 — models that plan, reason, and
-                act across multi-step tasks without human intervention. PolarisAI Platform is building native
-                agent orchestration into the inference layer.
-              </TrendItem>
-              <TrendItem badge="NEW">
-                <strong className="text-white">Multimodal Foundation Models:</strong> Text, image, audio, and
-                code understanding converging into single models is redefining platform requirements. GPT-4o,
-                Gemini 1.5, and Claude 4.6 set the standard — our platform now supports multimodal fine-tuning
-                adapters for vision-language tasks.
-              </TrendItem>
-              <TrendItem badge="RISING">
-                <strong className="text-white">RAG at Scale:</strong> A 2024 Databricks survey found 68% of
-                production GenAI apps use RAG. Our embeddings workbench is purpose-built to optimize retrieval
-                quality — chunk sizing, re-ranking, hybrid search — for enterprise RAG architectures.
-              </TrendItem>
+              <h4 className="text-[15px] font-bold text-ink">Discovery call: 30 minutes</h4>
+              <p className="text-[13.5px] leading-7 text-ink-soft mt-1">
+                Walk through your current AI/API spend, the workloads you would like to bring in-house, and the
+                hardware you already have available.
+              </p>
             </div>
+          </div>
+          <div className="flex gap-4 bg-white border border-gray-200 border-t-4 border-t-brand-teal rounded p-6">
+            <span className="shrink-0 w-9 h-9 rounded-full bg-brand-teal text-[#111] font-bold flex items-center justify-center">2</span>
             <div>
-              <TrendItem badge="HOT">
-                <strong className="text-white">On-Premise &amp; Sovereign AI:</strong> The EU AI Act, India's
-                DPDP Act, and APAC regulations are driving demand for private deployments. IDC forecasts the
-                on-premise AI market at $38B by 2027. Our SLM inference engine is purpose-designed for
-                air-gapped and private cloud environments.
-              </TrendItem>
-              <TrendItem badge="NEW">
-                <strong className="text-white">Parameter-Efficient Fine-Tuning (PEFT):</strong> LoRA and QLoRA
-                allow adaptation of 70B+ models by updating only 0.1% of parameters — reducing fine-tuning cost
-                by 95%. PolarisAI's fine-tuning module supports all major PEFT strategies natively, with
-                automated hyperparameter search.
-              </TrendItem>
-              <TrendItem badge="RISING">
-                <strong className="text-white">AI Observability &amp; MLOps:</strong> The 2024 State of MLOps
-                report found mature observability cuts model drift detection time by 3.8× and reduces incidents
-                by 55%. PolarisAI embeds drift monitoring, lineage tracking, and A/B gating as first-class
-                platform features.
-              </TrendItem>
+              <h4 className="text-[15px] font-bold text-ink">Functional demo and technical deep-dive: under NDA</h4>
+              <p className="text-[13.5px] leading-7 text-ink-soft mt-1">
+                A live platform walkthrough and a compatibility check against your existing infrastructure.
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <CTA title="Ready to Build on PolarisAI Platform?">
-        The gap between an AI idea and a production AI product is not a technology gap — it is an
+      <CTA
+        title="Ready to Build on PolarisAI Platform?"
+        action={
+          <Link
+            to="/platform/request-demo"
+            className="inline-flex items-center gap-2 bg-brand-teal text-[#111] font-semibold text-sm px-7 py-3 rounded-full hover:bg-brand-teal-dark hover:text-white transition-colors"
+          >
+            <i className="fa fa-calendar-check-o" aria-hidden="true" /> Request a Demo
+          </Link>
+        }
+      >
+        The gap between an AI idea and a production AI product is not a technology gap, it is an
         infrastructure gap. PolarisAI Platform eliminates it. Whether you need to post-train a domain model,
-        fine-tune an open-source LLM, quantize for edge deployment, or add production observability — we have
+        fine-tune an open-source LLM, apply PreciseQuant for edge deployment, or add production observability, we have
         the tooling, the expertise, and the track record to get you there faster and with greater confidence.
       </CTA>
 

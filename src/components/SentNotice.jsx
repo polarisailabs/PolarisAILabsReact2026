@@ -1,6 +1,11 @@
 import { useEffect, useRef } from 'react'
 
-export default function SentNotice({ onReset }) {
+export default function SentNotice({
+  onReset,
+  title = 'Message sent successfully',
+  message = 'Thanks for contacting us. We will get back to you soon.',
+  resetLabel = 'Send another message',
+}) {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -18,14 +23,14 @@ export default function SentNotice({ onReset }) {
       <div className="w-12 h-12 rounded-full bg-brand-teal text-[#111] flex items-center justify-center mx-auto mb-3 text-xl">
         <i className="fa fa-check" aria-hidden="true" />
       </div>
-      <h4 className="text-lg font-bold text-teal-900 mb-1">Message sent successfully</h4>
-      <p className="text-[14.5px] text-teal-800">Thanks for contacting us. We will get back to you soon.</p>
+      <h4 className="text-lg font-bold text-teal-900 mb-1">{title}</h4>
+      <p className="text-[14.5px] text-teal-800">{message}</p>
       <button
         type="button"
         onClick={onReset}
         className="mt-4 text-sm font-semibold text-brand-teal-dark hover:underline"
       >
-        Send another message
+        {resetLabel}
       </button>
     </div>
   )
