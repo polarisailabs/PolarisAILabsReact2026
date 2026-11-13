@@ -8,12 +8,12 @@ const NAV = [
     items: [
       { label: 'SumatiAI', to: '/products/sumatiai' },
       { label: 'VegaAI', to: '/products/vegaai' },
-      { label: 'SpicaAI', to: '/products/spicaai' },
       { label: 'MarisAI', to: '/products/marisai' },
+      { label: 'SpicaAI', to: '/products/spicaai' },
     ],
   },
   {
-    label: 'Platform',
+    label: 'Platforms',
     items: [
       { label: 'PolarisAI Platform', to: '/platform' },
       { label: 'RohiniAI Platform', to: '/platform/rohiniai' },

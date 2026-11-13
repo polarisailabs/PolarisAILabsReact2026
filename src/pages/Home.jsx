@@ -137,7 +137,7 @@ export default function Home() {
   return (
     <div>
       {/* Image slider — original slides & captions, banner height kept at 260px */}
-      <section className="relative w-full h-[260px] overflow-hidden bg-ink">
+      <section className="relative w-full h-[320px] sm:h-[260px] overflow-hidden bg-ink">
         {SLIDES.map((sl, i) => (
           <div
             key={sl.image}
@@ -153,7 +153,7 @@ export default function Home() {
                   <h3 className="text-lg sm:text-2xl font-bold text-white text-balance mb-1.5 leading-tight">
                     {sl.title}
                   </h3>
-                  <p className="text-white/85 text-xs mb-3 hidden sm:block">{sl.body}</p>
+                  <p className="text-white/85 text-xs mb-3 line-clamp-4 sm:line-clamp-none">{sl.body}</p>
                   <Link
                     to={sl.to}
                     className="inline-flex items-center bg-brand-teal text-[#111] font-bold text-xs sm:text-sm px-4 py-2 rounded hover:bg-white transition-colors"
