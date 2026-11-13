@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { sendContact } from '../lib/sendContact.js'
 import SentNotice from '../components/SentNotice.jsx'
 import { PageHeader } from '../components/ui.jsx'
 import { DEMO_CONFIGS } from '../data/demoConfigs.js'
+import { SUMATIAI_DEMO } from '../data/sumatiaiDemoConfig.js'
 
 const EMPTY = { name: '', email: '', phone: '', company: '', role: '', interests: [], comment: '' }
 
@@ -11,7 +12,7 @@ const inputClass =
   'w-full rounded border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-teal'
 
 export default function DemoRequest({ product }) {
-  const cfg = DEMO_CONFIGS[product]
+  const cfg = DEMO_CONFIGS[product] ?? (product === 'sumatiai' ? SUMATIAI_DEMO : undefined)
   const [form, setForm] = useState(EMPTY)
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
@@ -45,6 +46,8 @@ export default function DemoRequest({ product }) {
       setSending(false)
     }
   }
+
+  if (!cfg) return <Navigate to="/" replace />
 
   return (
     <div>
