@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import ProductHero from '../components/ProductHero.jsx'
 import { VideoPlayer } from '../components/ui.jsx'
 import { HERO_MODULES } from '../data/heroModules.js'
@@ -192,7 +193,7 @@ export default function SumatiAI() {
         modules={HERO_MODULES.sumatiai}
         gradient="bg-[linear-gradient(135deg,#f7aaaa_0%,#f08080_55%,#e66b6e_100%)]"
         ctaLabel="Request a demo"
-        ctaTo="/request-demo"
+        ctaTo="/products/sumatiai/request-demo"
         poweredBy={{ label: 'PolarisAI Platform', to: '/platform' }}
         ctaIcon="fa-calendar"
       />
@@ -233,12 +234,12 @@ export default function SumatiAI() {
             ))}
           </ul>
           <div className="mt-7 flex flex-wrap gap-3">
-            <a
-              href="/request-demo"
+            <Link
+              to="/products/sumatiai/request-demo"
               className="inline-flex items-center gap-2 bg-brand-teal text-[#111] font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-brand-teal-dark hover:text-white transition-colors"
             >
               <i className="fa fa-calendar" aria-hidden="true" /> Request a demo
-            </a>
+            </Link>
             <a
               href="#action"
               className="inline-flex items-center border border-gray-300 text-ink font-semibold text-sm px-6 py-2.5 rounded-full hover:border-brand-teal hover:text-brand-teal-dark transition-colors"

@@ -37,6 +37,7 @@ export default function App() {
           <Route path="/products/spicaai" element={<SpicaAI />} />
           <Route path="/products/spicaai/request-demo" element={<DemoRequest product="spicaai" />} />
           <Route path="/products/sumatiai" element={<SumatiAI />} />
+          <Route path="/products/sumatiai/request-demo" element={<DemoRequest product="sumatiai" />} />
           <Route path="/products/legalprodigyai" element={<Navigate to="/products/sumatiai" replace />} />
           <Route path="/product-management" element={<ProductManagement />} />
           <Route path="/mentorship" element={<Mentorship />} />
