@@ -5,14 +5,14 @@ import DidYouKnow from '../components/DidYouKnow.jsx'
 const SLIDES = [
   {
     image: '/img/slides/1.jpg',
-    title: 'AI Platforms',
-    body: 'From raw data to a lean, secure, production-ready AI: PolarisAI Platform recomposes and deploys Small Language Models, and RohiniAI Platform curates your data and guards every prompt and response.',
+    title: 'The Platforms Behind Your AI',
+    body: 'From raw data to innovative, secure, production-ready AI: PolarisAI Platform recomposes and deploys Small Language Models, and RohiniAI Platform curates your data and guards every prompt and response.',
     cta: 'Explore Platforms',
     to: '/platform',
   },
   {
     image: '/img/slides/4.jpg',
-    title: 'AI Products Powered by the PolarisAI Platform',
+    title: 'Products That Solve Real Business Problems',
     body: "We don't just build platforms, we ship products on them: SumatiAI, VegaAI, SpicaAI and MarisAI, solving real problems in law, travel, compliance and enterprise knowledge.",
     cta: 'Explore Products',
     to: '/products/sumatiai',
@@ -71,24 +71,20 @@ const PRODUCTS = [
 
 const PILLARS = [
   {
-    icon: '\u{1F3C6}',
-    title: 'Vision',
-    body: 'We help CXOs and product teams define a clear, actionable vision for deploying Small Language Models in their organization — articulating where on-device AI fits in the product strategy, what intelligence it unlocks, and how it differentiates the business from cloud-enabled and AI Roadmap Driven competitors.',
+    title: 'Find the right problem',
+    body: 'We start with your business goal and work out where AI fits, using our product management and technology advisory. You decide which problem is worth solving before anything is built.',
   },
   {
-    icon: '\u{1F680}',
-    title: 'Mission',
-    body: 'We turn the vision into a concrete delivery roadmap — from selecting the right base model and training corpus, through quantization and distillation, to edge deployment and monitoring. Short-term milestones and long-term production targets are defined for every model in your product portfolio and roadmap.',
+    title: 'Get your data ready',
+    body: 'RohiniAI Platform collects, curates and annotates your data, and puts guardrails around every prompt and response. Your AI starts from data you can trust.',
   },
   {
-    icon: '\u{1F5A5}\uFE0F',
-    title: 'Strategy',
-    body: 'We help define measurable goals and high-level initiatives around model efficiency — INT8/INT4 quantization targets, memory budgets, latency SLAs, and accuracy thresholds. We answer the hard questions: which model, for whom, on which device, and how it generates business value without a cloud dependency.',
+    title: 'Build and deploy your AI',
+    body: 'PolarisAI Platform recomposes, optimizes and deploys Small Language Models, from model selection and fine-tuning to quantization and running on desktops, laptops and mobile devices.',
   },
   {
-    icon: '\u{1F529}',
-    title: 'Technology',
-    body: 'We guide teams on the exact technology stack required to build production SLMs — LoRA/QLoRA fine-tuning, GPTQ/GGUF quantization, knowledge distillation pipelines, pruning frameworks, and on-device inference runtimes (llama.cpp, ONNX). The right stack for your hardware, budget, and accuracy bar.',
+    title: 'Deliver value and scale',
+    body: 'SumatiAI, VegaAI, MarisAI and SpicaAI show what this looks like in law, travel, enterprise knowledge and compliance. We help you build your own product the same way, then monitor and scale it.',
   },
 ]
 
@@ -258,19 +254,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Four pillars */}
+      {/* Adoption journey */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {PILLARS.map((p) => (
-            <div key={p.title} className="text-center">
-              <span className="w-14 h-14 rounded-full bg-brand-teal text-2xl flex items-center justify-center mx-auto mb-4">
-                {p.icon}
+        <SectionLabel icon="fa-road" className="mb-8">How We Take You There</SectionLabel>
+        <ol className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {PILLARS.map((p, i) => (
+            <li key={p.title} className="text-center">
+              <span className="w-14 h-14 rounded-full bg-brand-teal text-[#111] text-xl font-bold flex items-center justify-center mx-auto mb-4">
+                {i + 1}
               </span>
               <h3 className="font-bold text-ink mb-2">{p.title}</h3>
               <p className="text-[13px] leading-6 text-ink-soft text-justify">{p.body}</p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </section>
 
       <DidYouKnow facts={FACTS} />
