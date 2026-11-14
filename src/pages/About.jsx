@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { sendContact } from '../lib/sendContact.js'
 import SentNotice from '../components/SentNotice.jsx'
 import { PageHeader } from '../components/ui.jsx'
@@ -121,9 +122,9 @@ export default function About() {
                 Biba
               </a>
               ), a Small Language Models (SLMs) Platform (
-              <a href="https://www.polarisailabs.com/pap.html" className="text-brand-teal-dark hover:underline">
+              <Link to="/platform" className="text-brand-teal-dark hover:underline">
                 PolarisAI Platform
-              </a>
+              </Link>
               ), an e-commerce platform, and a travel platform (
               <a href="https://bit.ly/35pSI4w" className="text-brand-teal-dark hover:underline">
                 Chase Ultimate Rewards
@@ -137,7 +138,7 @@ export default function About() {
               and Data Admins at SMEs to recompose, optimize, fine-tune, and deploy Polaris AI open-weight
               optimized SLMs on their own local infrastructure — replacing costly API-based LLMs and delivering
               up to 90% cost savings and 80% lower latency, fully offline and privacy-compliant. These SLM's can
-              be Post-trained · PreciseQuantized · Distilled · PreciseTrimmed · Memory &amp; Compute Optimized using PolarisAI
+              be Post-trained · Quantized · Distilled · Pruned · Memory &amp; Compute Optimized using PolarisAI
               Platform.
             </p>
             <p>
