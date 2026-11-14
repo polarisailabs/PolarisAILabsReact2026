@@ -277,7 +277,7 @@ export default function SumatiAI() {
         <Heading lead="Watch a question turn into a cited answer, a court-ready draft and a matter that stays organised.">
           SumatiAI in Action
         </Heading>
-        <div className="mt-8">
+        <div className="mt-8 max-w-2xl mx-auto">
           {ACTION_VIDEO ? (
             <VideoPlayer src={ACTION_VIDEO.src} poster={ACTION_VIDEO.poster} title="SumatiAI walkthrough" />
           ) : ACTION_GIF ? (
