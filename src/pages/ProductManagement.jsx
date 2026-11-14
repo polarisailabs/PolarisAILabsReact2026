@@ -80,10 +80,12 @@ export default function ProductManagement() {
 
       <section className="bg-gray-50 border-y border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <h2 className="font-[var(--font-display)] text-2xl sm:text-3xl font-bold text-ink leading-tight text-balance text-center">
-            Drive and Launch 0-1 and 1-N Products
-          </h2>
-          <div className="mt-10 grid md:grid-cols-3 gap-5">
+          <div className="bg-teal-50/60 border border-teal-100 rounded-lg p-6 text-center">
+            <h2 className="font-[var(--font-display)] text-lg sm:text-xl font-bold text-ink leading-8 text-balance">
+              Drive and Launch 0-1 and 1-N Products
+            </h2>
+          </div>
+          <div className="mt-6 grid md:grid-cols-3 gap-5">
           <div className="bg-white border border-gray-200 border-l-4 border-l-brand-teal rounded-lg p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
             <p className="text-[14px] leading-7 text-ink-soft">
               The success rate of new products can be challenging to determine, as success is often subjective and can be measured in various ways. However, industry studies have suggested that a relatively low percentage of new products achieve significant success, with an HBR report estimating that only 28% of new products in general are successful. The success rate for freemium products is often estimated to be even lower, at 2–5%, and for mobile apps some estimates suggest only 1% are successful.

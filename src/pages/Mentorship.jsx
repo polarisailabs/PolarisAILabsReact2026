@@ -32,10 +32,12 @@ export default function Mentorship() {
 
       <section className="bg-gray-50 border-y border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <h2 className="font-[var(--font-display)] text-2xl sm:text-3xl font-bold text-ink leading-tight text-balance text-center">
-            Mentorship, Coaching and Corporate Training
-          </h2>
-          <div className="mt-10 grid md:grid-cols-3 gap-5">
+          <div className="bg-teal-50/60 border border-teal-100 rounded-lg p-6 text-center">
+            <h2 className="font-[var(--font-display)] text-lg sm:text-xl font-bold text-ink leading-8 text-balance">
+              Mentorship, Coaching and Corporate Training
+            </h2>
+          </div>
+          <div className="mt-6 grid md:grid-cols-3 gap-5">
           <div className="bg-white border border-gray-200 border-l-4 border-l-brand-teal rounded-lg p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
             <p className="text-[14px] leading-7 text-ink-soft">
               We firmly believe that the most effective way to learn about product management is by working with experienced product managers who have successfully driven and launched products in the past. Our product managers bring valuable insights, practical knowledge, and expertise that are essential for achieving success.

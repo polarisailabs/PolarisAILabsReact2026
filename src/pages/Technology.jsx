@@ -57,10 +57,12 @@ export default function Technology() {
 
       <section className="bg-gray-50 border-y border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <h2 className="font-[var(--font-display)] text-2xl sm:text-3xl font-bold text-ink leading-tight text-balance text-center">
-            Build and Scale Consumer and Enterprise Systems
-          </h2>
-          <div className="mt-10 grid md:grid-cols-3 gap-5">
+          <div className="bg-teal-50/60 border border-teal-100 rounded-lg p-6 text-center">
+            <h2 className="font-[var(--font-display)] text-lg sm:text-xl font-bold text-ink leading-8 text-balance">
+              Build and Scale Consumer and Enterprise Systems
+            </h2>
+          </div>
+          <div className="mt-6 grid md:grid-cols-3 gap-5">
           <div className="bg-white border border-gray-200 border-l-4 border-l-brand-teal rounded-lg p-6 hover:shadow-lg hover:shadow-black/5 transition-shadow">
             <p className="text-[14px] leading-7 text-ink-soft">
               Before Facebook, there were social networking platforms like Myspace, Friendster, and Orkut. Before Amazon, there were e-commerce companies like Ebay, Walmart, Best Buy, Sears, and OverStock. However, Facebook and Amazon were successful. Why?
