@@ -11,7 +11,6 @@ const columns = [
     heading: 'Quick Links',
     links: [
       { label: 'PolarisAI Platform', to: '/platform' },
-      { label: 'Pricing', to: '/pricing' },
       { label: 'Careers', to: '/about' },
       { label: 'Contact us', to: '/about' },
     ],
