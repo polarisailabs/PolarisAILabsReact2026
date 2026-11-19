@@ -22,6 +22,7 @@ const NAV = [
   {
     label: 'Research',
     items: [
+      { label: 'Solve AI Problems with AI', to: '/research/solve-ai-problems-with-ai' },
       { label: 'AI DNA Database', to: '/research/ai-dna-database' },
       { label: 'Pharma AI Economics', to: '/research/pharma-ai-economics' },
     ],

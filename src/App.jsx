@@ -20,6 +20,7 @@ import RecommendationsDemos from './pages/RecommendationsDemos.jsx'
 import TextClassificationDemos from './pages/TextClassificationDemos.jsx'
 import AIDNADatabase from './pages/AIDNADatabase.jsx'
 import PharmaAIEconomics from './pages/PharmaAIEconomics.jsx'
+import SolveAIProblemsWithAI from './pages/SolveAIProblemsWithAI.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
@@ -49,6 +50,7 @@ export default function App() {
           <Route path="/demos/text-classification" element={<TextClassificationDemos />} />
           <Route path="/research/ai-dna-database" element={<AIDNADatabase />} />
           <Route path="/research/pharma-ai-economics" element={<PharmaAIEconomics />} />
+          <Route path="/research/solve-ai-problems-with-ai" element={<SolveAIProblemsWithAI />} />
           <Route path="/platform/rohiniai" element={<RohiniAI />} />
           <Route path="/platform/rohiniai/request-demo" element={<DemoRequest product="rohiniai" />} />
           <Route path="*" element={<NotFound />} />
