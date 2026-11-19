@@ -265,7 +265,6 @@ export default function PharmaAIEconomics() {
         badges={['Research', 'Pharma R&D']}
         modules={HERO_MODULES}
         gradient="bg-[linear-gradient(135deg,#1e3a8a_0%,#0d7de8_50%,#0f766e_100%)]"
-        poweredBy={{ label: 'PolarisAI Platform', to: '/platform' }}
       />
 
       {/* ============ Intro ============ */}

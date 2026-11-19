@@ -224,7 +224,6 @@ export default function AIDNADatabase() {
         badges={['Research', 'Molecular Storage']}
         modules={HERO_MODULES}
         gradient="bg-[linear-gradient(135deg,#007aff_0%,#5856d6_50%,#af52de_100%)]"
-        poweredBy={{ label: 'PolarisAI Platform', to: '/platform' }}
       />
 
       {/* ============ Intro ============ */}
